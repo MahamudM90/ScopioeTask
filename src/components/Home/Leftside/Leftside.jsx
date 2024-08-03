@@ -41,7 +41,10 @@ export default function LeftSide() {
                    <CiSettings className='w-6 h-6 text-[#5C635A]'/>
                     <h5 className='font-poppins text-[#5C635A]'>Settings</h5>
                 </div>
+                
             </div>
+            
+            
         </div>
     )
 }

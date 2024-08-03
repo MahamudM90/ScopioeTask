@@ -31,12 +31,12 @@ export default function SignUp() {
     };
 
     return (
-        <div className='flex justify-between'>
-            <div className="p-4 ml-4">
+        <div className='flex justify-between mt-4'>
+            <div className="ml-12 p-6">
                 <div>
-                    <h1 className='text-xl text-[#4285F3]  font-poor-richard'>LOGO</h1>
-                    <h5 className='text-xl text-[#152A16] w-[362px] h-[24px] mt-2 font-bold font-poppins'>Sign In To your Account</h5>
-                    <p className='w-[429px] h-[67px] mt-4 text-[#5C635A] font-poppins'>Welcome Back! By click the sign up button, you're agree to Zenitood Terms and Service and acknlowledge the <span className='underline text-[#156BCA]'> Privacy and Policy</span> </p>
+                    <h1 className='text-4xl text-[#4285F3]  font-poor-richard'>LOGO</h1>
+                    <h5 className='text-3xl text-[#152A16] w-[362px] h-[24px] mt-4 font-bold font-poppins'>Sign In To your Account</h5>
+                    <p className='w-[429px] h-[67px] mt-6 text-[#5C635A] font-poppins'>Welcome Back! By click the sign up button, you're agree to Zenitood Terms and Service and acknlowledge the <span className='underline text-[#156BCA]'> Privacy and Policy</span> </p>
                 </div>
                 <div className='mt-4'>
                     <form onSubmit={handleSubmit} >
@@ -48,7 +48,7 @@ export default function SignUp() {
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="mt-1 p-2 border border-gray-300 rounded outline-none w-full" placeholder="@username"
+                                className="mt-1 p-2 border border-gray-300 rounded-lg outline-none w-[440px] h-[50px]" placeholder="@username"
                                 required
                             />
                         </div>
@@ -60,7 +60,7 @@ export default function SignUp() {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="mt-1 p-2 border border-gray-300 rounded w-full outline-none  w-1/3" placeholder="Enter Your email"
+                                className="mt-1 p-2 border border-gray-300 rounded-lg outline-none w-[440px] h-[50px]" placeholder="Enter Your email"
                                 required
                             />
                         </div>
@@ -73,7 +73,7 @@ export default function SignUp() {
                                     name="password"
                                     value={formData.password}
                                     onChange={handleChange}
-                                    className="mt-1 p-2 border border-gray-300 rounded w-full outline-none  w-full"
+                                    className="mt-1 p-2 border border-gray-300 rounded-lg outline-none w-[440px] h-[50px]"
                                     placeholder='Enter your password'
                                     required
                                 />
@@ -99,7 +99,7 @@ export default function SignUp() {
                                     name="confirmPassword"
                                     value={formData.confirmPassword}
                                     onChange={handleChange}
-                                    className="mt-1 p-2 border border-gray-300 rounded  w-full outline-none" placeholder="Re-type password"
+                                    className="mt-1 p-2 border border-gray-300 rounded-lg outline-none w-[440px] h-[50px]" placeholder="Re-type password"
                                     required
                                 />
                                 <button
@@ -138,12 +138,12 @@ export default function SignUp() {
                 </div>
             </div>
             <div className='mx-8 mt-4 rounded'>
-                <img className='w-[515px] h-[615px] blur' src={Rectangle}></img>
+                <img className='w-[648px] h-[802px] blur-lg' src={Rectangle}></img>
             </div>
-            <div className='absolute ml-[890px] mt-[270px] w-[341px] h-[143px] bg-[#152A16] opacity-[70%] rounded'>
-                <div className='text-center mt-10 ml-14 w-[221px] h-[53px]'>
-                    <h2 className='text-[#156BCA] font-poppins'>Create Account</h2>
-                    <h5 className='text-[#FFFFFF] font-poppins'>Fill In your Information</h5>
+            <div className='absolute ml-[790px] mt-[320px] w-[341px] h-[143px] bg-[#152A16] opacity-[70%] rounded-lg'>
+                <div className='text-center mt-10 ml-12 w-[221px] h-[53px]'>
+                    <h2 className='text-[#156BCA] font-poppins text-xl font-semibold'>Create Account</h2>
+                    <h5 className='text-[#FFFFFF] font-poppins text-xl '>Fill In your Information</h5>
                 </div>
 
             </div>

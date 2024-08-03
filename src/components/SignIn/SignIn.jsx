@@ -32,26 +32,26 @@ export default function SignIn() {
 
     return (
         <div className='flex justify-between'>
-            <div className="p-4 ml-6 mt-10">
+            <div className="p-6 ml-6 mt-10">
                 <div>
-                    <h1 className='text-xl text-[#4285F3]  font-poor-richard'>LOGO</h1>
-                    <h5 className='text-xl text-[#152A16] w-[362px] h-[24px] mt-2 font-bold font-poppins'>Log In To your Account</h5>
-                    <p className='w-[362px] h-[11px] mt-4 text-[#5C635A] font-poppins'>Welcome Back! Select a method to log in:</p>
+                    <h1 className='text-4xl text-[#4285F3]  font-poor-richard'>LOGO</h1>
+                    <h5 className='text-3xl text-[#152A16] w-[362px] h-[24px] mt-2 font-bold font-poppins'>Log In To your Account</h5>
+                    <p className='w-[362px] h-[11px] mt-6 text-[#5C635A] font-poppins'>Welcome Back! Select a method to log in:</p>
                 </div>
                 <div className='mt-8 w-[432px] h-[70px] flex gap-12'>
                     <div className=''>
-                        <div className='absolute mt-2.5 ml-2.5'>
-                            <FcGoogle />
+                        <div className='absolute mt-5 ml-8'>
+                            <FcGoogle  />
                         </div>
-                        <button type="submit" className="px-4 bg-[#E4E4E4] text-[#152A16] font-poppins rounded w-[127px] h-[38px] font-poppins">
+                        <button type="submit" className="px-4 bg-[#E4E4E4] text-[#152A16] font-poppins rounded w-[177px] h-[55px] font-poppins">
                             Google
                         </button>
                     </div>
                     <div>
-                        <div className='absolute mt-2.5 ml-3'>
+                        <div className='absolute  ml-10 py-4 mt-0.5'>
                             <LuFacebook className='text-[#FFFFFF] font-bold' />
                         </div>
-                        <button type="submit" className="px-4 bg-blue-500 text-[#FFFFFF] text-[#152A16] font-poppins rounded w-[147px] h-[38px] font-poppins">
+                        <button type="submit" className="px-4 bg-blue-500 text-[#FFFFFF] text-[#152A16] font-poppins rounded-lg w-[205px] h-[54px] font-poppins">
                             Facebook
                         </button>
                     </div>
@@ -72,7 +72,7 @@ export default function SignIn() {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="mt-1 p-2 border border-gray-300 rounded w-full outline-none  w-1/3" placeholder="Enter Your email"
+                                className="mt-1 p-2 border border-gray-300 rounded-lg outline-none w-[440px] h-[50px]" placeholder="Enter Your email"
                                 required
                             />
                         </div>
@@ -85,7 +85,7 @@ export default function SignIn() {
                                     name="password"
                                     value={formData.password}
                                     onChange={handleChange}
-                                    className="mt-1 p-2 border border-gray-300 rounded w-full outline-none  w-full"
+                                    className="mt-1 p-2 border border-gray-300 rounded-lg outline-none w-[440px] h-[50px]"
                                     placeholder='Enter your password'
                                     required
                                 />
@@ -129,12 +129,12 @@ export default function SignIn() {
                     </form>
                 </div>
             </div>
-            <div className='mx-8 mt-4 rounded'>
-                <img className='w-[515px] h-[615px] blur' src={Rectangle}></img>
+            <div className='mx-8 mt-4 rounded-lg'>
+                <img className='w-[648px] h-[802px] blur-lg' src={Rectangle}></img>
             </div>
-            <div className='absolute ml-[890px] mt-[270px] w-[341px] h-[143px] bg-[#152A16] opacity-[70%] rounded'>
-                <div className='text-center mt-10 ml-14 w-[190px] h-[23px]'>
-                    <h4 className='text-[#FFFFFFF5]'><span className='text-[#156BCA] font-poppins'>Sign In</span> to view all the massage therapists</h4>
+            <div className='absolute ml-[790px] mt-[310px] w-[341px] h-[143px] bg-[#152A16] opacity-[70%] rounded-lg'>
+                <div className='text-center mt-10 ml-14 w-[271px] h-[83px]'>
+                    <h4 className='text-[#FFFFFFF5] text-xl font-semibold'><span className='text-[#156BCA] font-poppins '>Sign In</span> to view all the massage therapists</h4>
                 </div>
 
             </div>
