@@ -26,6 +26,11 @@ export default function SignUp() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const name= e.target.name.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        const confirmPassword = e.target.confirmPassword.value;
+        console.log(name,email,password,confirmPassword);
         // Handle form submission logic
         console.log(formData);
     };

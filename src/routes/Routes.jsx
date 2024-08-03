@@ -5,6 +5,7 @@ import SignIn from "../components/SignIn/SignIn";
 import Home from "../components/Home/Home";
 import SignUp from "../components/SignUp/SignUp";
 import ErrorPage from "../components/Error/Error";
+import SignNew from "../components/SignUp/iphone/SignNew";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     {
         path: '/signup',
         element: <SignUp></SignUp>
+    },
+    {
+      path: '/signnew',
+      element: <SignNew></SignNew>
     }
     
   ]);
