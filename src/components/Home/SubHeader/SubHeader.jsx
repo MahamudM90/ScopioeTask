@@ -21,7 +21,7 @@ export default function SubHeader() {
                     <input type='text' placeholder='ZIP code or city name' className='border border-gray-300 rounded shadow-sm focus:outline-none w-[430px] h-[36px] bg-[#EEF2F5] p-2 font-poppins'></input>
                 </div>
                 <div>
-                    <button className='w-[83px] h-[40px] bg-[#156BCA] rounded -ml-1 text-[#FFFFFF] font-poppins'>Go</button>
+                    <button className='w-[63px] h-[33px] bg-[#156BCA] rounded -ml-1 text-[#FFFFFF] font-poppins'>Go</button>
                 </div>
             </div>
         </div>

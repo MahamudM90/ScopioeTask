@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Rectangle from '../../assets/Rectangle.svg'
 import { FaEye } from "react-icons/fa"
 import { FaEyeSlash } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 export default function SignUp() {
@@ -82,10 +83,10 @@ export default function SignUp() {
                                     className="absolute -ml-10 mt-5"
                                 >
                                     {showPassword ? <div>
-                                        <FaEye />    
+                                        <FaEye />
                                     </div> : <div>
-                                    <FaEyeSlash />
-                                        </div>}
+                                        <FaEyeSlash />
+                                    </div>}
                                 </button>
                             </div>
                         </div>
@@ -107,10 +108,10 @@ export default function SignUp() {
                                     className="absolute -ml-10 mt-5"
                                 >
                                     {showPassword ? <div>
-                                        <FaEye />  
+                                        <FaEye />
                                     </div> : <div>
-                                    <FaEyeSlash />
-                                        </div>}
+                                        <FaEyeSlash />
+                                    </div>}
                                 </button>
                             </div>
                         </div>
@@ -131,7 +132,7 @@ export default function SignUp() {
                             <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded w-[258px] h-[42px] font-poppins">
                                 Sign Up
                             </button>
-                            <h4 className='font-poppins'>Already Have an Account? Login</h4>
+                            <h4 className='font-poppins mr-3 mt-2'>Already Have an Account? <Link to='/signin'><span className='text-[#156BCA] underline'>Login</span></Link> </h4>
                         </div>
                     </form>
                 </div>
@@ -141,10 +142,10 @@ export default function SignUp() {
             </div>
             <div className='absolute ml-[890px] mt-[270px] w-[341px] h-[143px] bg-[#152A16] opacity-[70%] rounded'>
                 <div className='text-center mt-10 ml-14 w-[221px] h-[53px]'>
-                <h2 className='text-[#156BCA] font-poppins'>Create Account</h2>
-                <h5 className='text-[#FFFFFF] font-poppins'>Fill In your Information</h5>
+                    <h2 className='text-[#156BCA] font-poppins'>Create Account</h2>
+                    <h5 className='text-[#FFFFFF] font-poppins'>Fill In your Information</h5>
                 </div>
-               
+
             </div>
         </div>
     );
