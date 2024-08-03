@@ -12,34 +12,34 @@ export default function LeftSide() {
             <div className='p-6'>
                 <div className='flex gap-1 items-center'>
                     <img src={category}></img>
-                    <h5>Home</h5>
+                    <h5 className='font-poppins'>Home</h5>
                 </div>
                 <div className='flex gap-1 mt-2'>
-                    <BsPeople className='w-5 h-5' />
-                    <h5>New Listing</h5>
+                    <BsPeople className='w-5 h-5 color-[#5C635A]' />
+                    <h5 className='font-poppins text-[#5C635A]'>New Listing</h5>
                 </div>
                 <div className='flex gap-1 mt-2'>
-                    <img src={search}></img>
-                    <h5>Search</h5>
+                    <img className='color-[#5C635A]' src={search}></img>
+                    <h5 className='font-poppins text-[#5C635A]'>Search</h5>
                 </div>
                 <div className='flex gap-1 mt-2'>
-                    <img src={paper}></img>
-                    <h5>About</h5>
+                    <img className='color-[#5C635A]' src={paper}></img>
+                    <h5 className='font-poppins text-[#5C635A]'>About</h5>
                 </div>
                 <div className='flex gap-1 mt-2'>
-                    <img src={heart}></img>
-                    <h5>Favourite</h5>
+                    <img className='color-[#5C635A]' src={heart}></img>
+                    <h5 className='font-poppins text-[#5C635A]'>Favourite</h5>
                 </div>
                 <div className='mt-2'>
                     <hr className='w-[210px]'></hr>
                 </div>
                 <div className='flex gap-1 mt-2'>
-                    <img src={circle}></img>
-                    <h5>Help Center</h5>
+                    <img className='color-[#5C635A]' src={circle}></img>
+                    <h5 className='font-poppins text-[#5C635A]'>Help Center</h5>
                 </div>
                 <div className='flex gap-1 mt-2'>
-                   <CiSettings className='w-6 h-6'/>
-                    <h5>Settings</h5>
+                   <CiSettings className='w-6 h-6 color-[#5C635A]'/>
+                    <h5 className='font-poppins text-[#5C635A]'>Settings</h5>
                 </div>
             </div>
         </div>
