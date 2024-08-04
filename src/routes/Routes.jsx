@@ -6,11 +6,12 @@ import Home from "../components/Home/Home";
 import SignUp from "../components/SignUp/SignUp";
 import ErrorPage from "../components/Error/Error";
 import SignNew from "../components/SignUp/iphone/SignNew";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
       path: "/",
-      element:<Home></Home>,
+      element:<PrivateRoute><Home></Home></PrivateRoute>,
       errorElement: <ErrorPage></ErrorPage>
     },
     {

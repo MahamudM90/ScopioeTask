@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Rectangle from '../../assets/Rectangle.svg'
 import { FaEye } from "react-icons/fa"
 import { FaEyeSlash } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-
+import { AuthContext } from '../../provider/AuthProvider';
+import toast from 'react-hot-toast';
 
 export default function SignUp() {
+
+    const { signupUser } = useContext(AuthContext)
+
+    
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -26,11 +32,29 @@ export default function SignUp() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const name= e.target.name.value;
+        const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const confirmPassword = e.target.confirmPassword.value;
-        console.log(name,email,password,confirmPassword);
+        e.target.reset();
+    
+       
+        signupUser(email, password)
+            .then((userCredential) => {
+                // Signed up 
+                const user = userCredential.user;
+                // ...
+                if (user) {
+                    toast('User Created Successfully')
+                }
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                toast(errorMessage);
+                // ..
+            });
+        console.log(name, email, password, confirmPassword);
         // Handle form submission logic
         console.log(formData);
     };
@@ -152,6 +176,7 @@ export default function SignUp() {
                 </div>
 
             </div>
+           
         </div>
     );
 };

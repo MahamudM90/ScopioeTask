@@ -1,8 +1,23 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import {AiOutlineMenu,AiOutlineClose} from 'react-icons/ai'
+import { AuthContext } from "../../../provider/AuthProvider"
+import { Link } from "react-router-dom"
 
 export default function Navbar(){
     const [open,setOpen] = useState(false)
+
+    const {logOut, user} = useContext(AuthContext);
+
+    const handleLogout=()=>{
+        logOut().
+        then(() => {
+          // Sign-out successful.
+        }).catch((error) => {
+          // An error happened.
+        });
+  
+      }
+    
     const routes = [
         {
             id:1, path:'/', name: 'Home'
@@ -17,6 +32,21 @@ export default function Navbar(){
     ]
     return(
         <nav>
+            <div>
+            {
+          
+          user?
+          <div className="flex">
+            <p>{user.email}</p>
+            <img src={user.photoURL}></img>
+            <button onClick={handleLogout} className="btn btn-neutral w-1/4 h-1/5">SignOut
+          </button>
+          </div>
+          :
+          <Link to='/signin' className="btn btn-neutral w-1/4 h-1/5">LogIn</Link>
+          
+        }
+            </div>
             <div className="md:hidden text-2xl" onClick={()=>setOpen(!open)}>
                 {
                     open===true ? <AiOutlineClose></AiOutlineClose>:  <AiOutlineMenu></AiOutlineMenu>

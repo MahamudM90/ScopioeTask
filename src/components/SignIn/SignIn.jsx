@@ -2,12 +2,54 @@ import React, { useState } from 'react';
 import Rectangle from '../../assets/Rectangle.svg'
 import { FaEye } from "react-icons/fa"
 import { FaEyeSlash } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 import { LuFacebook } from "react-icons/lu"
+import toast from 'react-hot-toast';
+import { useContext } from 'react';
+import { AuthContext } from '../../provider/AuthProvider';
+
+import auth from '../../firebase/firebase';
+import { GoogleAuthProvider,signInWithPopup } from 'firebase/auth';
+
 
 
 export default function SignIn() {
+    const {googleUser} = useContext(AuthContext)
+    const googleProvider = new GoogleAuthProvider();
+
+    const googleHandle = ()=> {  
+        googleUser(auth, googleProvider)
+        .then((result) => {
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          const token = credential.accessToken;
+          // The signed-in user info.
+          const signInUser = result.user;
+          if(signInUser){
+            toast('SuccessFully Done Google Login')
+          }
+          navigate(location?.state ? location.state: '/')
+          // IdP data available using getAdditionalUserInfo(result)
+          // ...
+        }).catch((error) => {
+          // Handle Errors here.
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // The email of the user's account used.
+          const email = error.customData.email;
+          // The AuthCredential type that was used.
+          const credential = GoogleAuthProvider.credentialFromError(error);
+          // ...
+        });
+        
+        
+          
+    }
+    const {signinUser} = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         email: '',
         password: '',
@@ -15,6 +57,7 @@ export default function SignIn() {
     });
 
     const [showPassword, setShowPassword] = useState(false);
+
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -26,9 +69,28 @@ export default function SignIn() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic
-        console.log(formData);
-    };
+        const email= e.target.email.value;
+        const password = e.target.password.value;
+        e.target.reset();
+        signinUser(email,password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            if(user){  
+                toast('Login Successfully Done')
+            }
+            navigate(location?.state ? location.state: '/')
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            toast(errorMessage);
+          });
+
+    }
+    
+    
 
     return (
         <div className='flex justify-between'>
@@ -43,7 +105,7 @@ export default function SignIn() {
                         <div className='absolute mt-5 ml-8'>
                             <FcGoogle  />
                         </div>
-                        <button type="submit" className="px-4 bg-[#E4E4E4] text-[#152A16] font-poppins rounded w-[177px] h-[55px] font-poppins">
+                        <button onClick={googleHandle} type="submit" className="px-4 bg-[#E4E4E4] text-[#152A16] font-poppins rounded w-[177px] h-[55px] font-poppins">
                             Google
                         </button>
                     </div>
