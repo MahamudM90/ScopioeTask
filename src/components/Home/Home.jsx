@@ -1,19 +1,21 @@
-import Header from "./Navbar/Navbar";
-import LeftSide from "./Leftside/Leftside";
-import MiddleSide from "./MiddleSide/MiddleSide";
-import Navbar from "./Navbar/Navbar"
+import Navbar from './Navbar/Navbar';
+import LeftSide from './Leftside/Leftside';
+import MiddleSide from './MiddleSide/MiddleSide';
 
-
-export default function () {
+const Home = () => {
     return (
-        <div>
-            <Navbar></Navbar>
-            <div className="flex">
-                <LeftSide></LeftSide>
-                <div className="bg-[#EEF2F5]">
+        <div className='w-full h-fit'>
+            <div className='w-full flex'>
+                <div className='w-[250px] h-fit border-r border-borderOne'>
+                    <LeftSide></LeftSide>
+                </div>
+                <div className='w-full'>
+                    <Navbar></Navbar>
                     <MiddleSide></MiddleSide>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
+export default Home;

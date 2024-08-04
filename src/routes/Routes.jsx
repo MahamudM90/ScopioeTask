@@ -26,7 +26,6 @@ const router = createBrowserRouter([
       path: '/signnew',
       element: <SignNew></SignNew>
     }
-    
   ]);
 
   export default router;

@@ -8,8 +8,18 @@ export default {
     extend: {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
-        'poor-richard': ['"Poor Richard"', 'serif'],
+        'poorRichard': ['"Poor Richard"', 'serif'],
       },
+      colors: {
+        primary: '#fff',
+        secondary: '#EEF2F5',
+        tertiary: '#D4E9FF',
+        logoColor: '#4285F3',
+        btnColor: '#156BCA',
+        borderOne: '#E7E7E7',
+        lightBlack: '#5C635A',
+        lightBlackMain: '#152A16',
+      }
     },
   },
   plugins: [],
