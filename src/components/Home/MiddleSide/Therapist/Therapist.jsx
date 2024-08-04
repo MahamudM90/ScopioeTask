@@ -45,7 +45,7 @@ const Therapist = () => {
     };
 
     return (
-        <div className="bg-primary rounded-[10px] p-5 w-full h-fit flex items-center gap-4">
+        <div className="bg-primary rounded-[10px] p-5 w-full h-fit flex items-center justify-center gap-4">
             <div>
                 <div onClick={handleLeftClick} className="w-10 h-10 rounded-full bg-[#D4E9FF] hover:bg-[#156BCA] text-[#156BCA] hover:text-[#fff] flex items-center justify-center cursor-pointer">
                     <MdOutlineKeyboardArrowLeft className="text-2xl" />

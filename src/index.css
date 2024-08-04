@@ -3,3 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.splide__pagination__page {
+    background-color: #CCCCCC !important; /* Inactive dot color */
+}
+
+.splide__pagination__page.is-active {
+    background-color: #156BCA !important; /* Active dot color */
+}

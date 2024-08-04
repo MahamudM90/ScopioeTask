@@ -1,10 +1,10 @@
 const Cities = () => {
     return (
         <div className="bg-primary rounded-[10px] w-full h-fit">
-            <div className="flex flex-col gap-4 py-6">
+            <div className="flex flex-col gap-[17.5px] py-8">
                 {citiesData.map((city, idx) => (
                     <>
-                        <div key={idx} className="grid grid-cols-3 gap-4 px-8">
+                        <div key={idx} className="grid grid-cols-3 gap-5 px-10">
                             {city.places.map((place, index) => (
                                 <div key={index}>
                                     <p className="text-btnColor underline font-poppins text-[14px]">{place}</p>
